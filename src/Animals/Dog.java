@@ -18,10 +18,15 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void voice() {
-
+    void voice() {
         System.out.println( "gav-gav");
-        for (TailType s : TailType.values()) { System.out.print(s); }
+    }
 
+    @Override
+    void info () {
+        System.out.println(
+            name+" - "+color+" - "+age +
+            ( this.tailType instanceof TailType ? " - " + tailType : "")
+        );
     }
 }
