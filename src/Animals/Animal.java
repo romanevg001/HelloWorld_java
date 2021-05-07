@@ -1,29 +1,24 @@
 package Animals;
 
 public abstract class Animal {
-    protected String name;
-    protected String color;
-    protected double age;
+    String name;
+    int maxRunDistance;
+    int maxSwimDistance;
 
-    void info () {
-        System.out.println(name+" - "+color+" - "+age);
+    void run(int distance) {
+        System.out.println(this.maxRunDistance);
+        if (distance <= this.maxRunDistance) {
+            System.out.println(this.name +" пробежал "+ distance + " м ");
+        } else {
+            System.out.println(this.name +" не пробежал "+ distance + " м ");
+        }
     }
 
-    void setAge(double age) {
-        this.age = age;
+    void swim(int distance) {
+        if (distance <= this.maxSwimDistance) {
+            System.out.println(this.name +" проплыл "+ distance + " м ");
+        } else {
+            System.out.println(this.name +" не проплыл "+ distance + " м ");
+        }
     }
-
-    double getAge() {
-        return age;
-    }
-
-    String getColor() {
-        return color;
-    }
-
-    String getName() {
-        return name;
-    }
-
-    abstract void voice();
 }
