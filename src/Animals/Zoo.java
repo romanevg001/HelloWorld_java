@@ -12,13 +12,17 @@ public class Zoo<T> {
         Cat[] cats = (Cat[]) this.generateAnimals(catsName, AnimalType.Cat);
         Dog[] dogs = (Dog[]) this.generateAnimals(dogsName, AnimalType.Dog);
 
+
         for (int i = 0; i < cats.length; i++) {
-            cats[i].run((int) Math.random() * 1000);
-            cats[i].swim((int) Math.random() * 100);
+            System.out.println("-------------------" + AnimalType.Cat +"------------------");
+
+            cats[i].run((int) Math.round(Math.random() * 200));
+            cats[i].swim((int) Math.round(Math.random() * 10));
         }
         for (int i = 0; i < dogs.length; i++) {
-            dogs[i].run((int) Math.random() * 1000);
-            dogs[i].swim((int) Math.random() * 100);
+            System.out.println("-------------------" + AnimalType.Dog +"------------------");
+            dogs[i].run((int) Math.round(Math.random() * 1000));
+            dogs[i].swim((int) Math.round(Math.random() * 100));
         }
 
     }
@@ -40,12 +44,12 @@ public class Zoo<T> {
         return animals;
     }
 
-    private Object createAnimal(String animalsName, AnimalType type) {
+    private Object createAnimal(String animalName, AnimalType type) {
         if (type == AnimalType.Cat) {
-            return new Cat(animalsName);
+            return new Cat(animalName);
         }
         if (type == AnimalType.Dog) {
-            return new Dog(animalsName);
+            return new Dog(animalName);
         }
         return null;
     }

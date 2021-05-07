@@ -16,4 +16,13 @@ public class Dog extends Animal {
         this.age = age;
     }
 
+
+    void run(int distance) {
+        super.run(distance, this.maxRunDistance);
+    }
+
+    void swim(int distance) {
+        super.swim(distance, this.maxSwimDistance);
+    }
+
 }

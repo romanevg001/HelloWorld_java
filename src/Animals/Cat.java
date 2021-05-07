@@ -9,9 +9,15 @@ public class Cat extends Animal {
     public Cat(String name) {
         this.name = name;
     }
-    @Override
+
+
+    void run(int distance) {
+        super.run(distance, this.maxRunDistance);
+    }
+
     void swim(int distance) {
         System.out.println(this.name +" не умеет плавать ");
     }
+
 
 }
