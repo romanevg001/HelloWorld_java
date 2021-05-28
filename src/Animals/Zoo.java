@@ -18,6 +18,8 @@ public class Zoo<T> {
 
             cats[i].run((int) Math.round(Math.random() * 200));
             cats[i].swim((int) Math.round(Math.random() * 10));
+
+            cats[i].downloadSVG("./print.svg");
         }
         for (int i = 0; i < dogs.length; i++) {
             System.out.println("-------------------" + AnimalType.Dog +"------------------");

@@ -1,6 +1,8 @@
 package Animals;
 
 import Animals.Animal;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Cat extends Animal {
     int maxRunDistance = 200;
@@ -19,5 +21,12 @@ public class Cat extends Animal {
         System.out.println(this.name +" не умеет плавать ");
     }
 
+    public void downloadSVG(String svg) {
+        try(FileOutputStream file = new FileOutputStream(svg)) {
+            System.out.println( file);
+        } catch (IOException e) {
 
+        }
+
+    }
 }
