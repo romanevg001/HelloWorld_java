@@ -6,8 +6,14 @@ import Animals.Dog;
 public class Zoo<T> {
 
     public Zoo() {
+
+
         String [] catsName = {"Барсик","Уксус","Сода"};
         String [] dogsName = {"Майло","Иван","Мухтар"};
+
+        CreateAnimal<Cat> cat = new CreateAnimal<>(new Cat("Соня"));
+
+        cat.getAnimal().run(200);
 
         Cat[] cats = (Cat[]) this.generateAnimals(catsName, AnimalType.Cat);
         Dog[] dogs = (Dog[]) this.generateAnimals(dogsName, AnimalType.Dog);
