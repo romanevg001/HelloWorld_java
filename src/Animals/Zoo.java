@@ -11,10 +11,10 @@ public class Zoo<T> {
         String [] dogsName = {"Майло","Иван","Мухтар"};
 
         CreateAnimal<Cat> cat = new CreateAnimal<>(new Cat("Соня"));
-        CreateAnimal<Cat> cat2 = new CreateAnimal<>(new Cat("Соня"));
+        CreateAnimal<Dog> dog = new CreateAnimal<>(new Dog("Соня"));
 
         cat.getAnimal().run(200);
-        System.out.println(cat.isEqual(cat2));
+        System.out.println(cat.isEqual(dog));
 
         Cat[] cats = (Cat[]) this.generateAnimals(catsName, AnimalType.Cat);
         Dog[] dogs = (Dog[]) this.generateAnimals(dogsName, AnimalType.Dog);
@@ -53,12 +53,12 @@ public class Zoo<T> {
         return animals;
     }
 
-    private Object createAnimal(String animalName, AnimalType type) {
+    private <T extends Animal> T createAnimal(String animalName, AnimalType type) {
         if (type == AnimalType.Cat) {
-            return new Cat(animalName);
+            return (T) new Cat(animalName);
         }
         if (type == AnimalType.Dog) {
-            return new Dog(animalName);
+            return (T) new Dog(animalName);
         }
         return null;
     }

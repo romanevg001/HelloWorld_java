@@ -19,7 +19,7 @@ public class CreateAnimal<T extends Animal> {
 
 
     public boolean isEqual (CreateAnimal<?> anotherAnimal) {
-        return this.animal.name == anotherAnimal.animal.name;
+        return this.animal.getClass().getName() == anotherAnimal.animal.getClass().getName();
     }
 
 }
