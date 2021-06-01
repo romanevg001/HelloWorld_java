@@ -2,10 +2,10 @@ package Animals;
 
 
 public class Dog extends Animal {
-    int maxRunDistance = 500;
-    int maxSwimDistance = 10;
-    String color;
-    double age;
+    private int maxRunDistance = 500;
+    private int maxSwimDistance = 10;
+    private String color;
+    private double age;
 
     public Dog(String name) {
         this.name = name;

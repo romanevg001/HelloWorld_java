@@ -1,7 +1,6 @@
 package Animals;
+
 import Animals.AnimalType;
-import Animals.Cat;
-import Animals.Dog;
 
 public class Zoo<T> {
 
@@ -12,8 +11,10 @@ public class Zoo<T> {
         String [] dogsName = {"Майло","Иван","Мухтар"};
 
         CreateAnimal<Cat> cat = new CreateAnimal<>(new Cat("Соня"));
+        CreateAnimal<Cat> cat2 = new CreateAnimal<>(new Cat("Соня"));
 
         cat.getAnimal().run(200);
+        System.out.println(cat.isEqual(cat2));
 
         Cat[] cats = (Cat[]) this.generateAnimals(catsName, AnimalType.Cat);
         Dog[] dogs = (Dog[]) this.generateAnimals(dogsName, AnimalType.Dog);

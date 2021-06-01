@@ -4,6 +4,7 @@ public abstract class Animal {
     String name;
 
 
+
     void run(int distance, int maxRunDistance) {
         if (distance <= maxRunDistance) {
             System.out.println(this.name +" пробежал "+ distance + " м ");

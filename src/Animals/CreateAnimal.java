@@ -1,8 +1,8 @@
 package Animals;
-import Animals.AnimalType;
+
 import Animals.Animal;
 
-public class CreateAnimal<T> {
+public class CreateAnimal<T extends Animal> {
     private T animal;
 
     public T getAnimal() {
@@ -15,6 +15,11 @@ public class CreateAnimal<T> {
 
     public CreateAnimal(T animal) {
         this.animal = animal;
+    }
+
+
+    public boolean isEqual (CreateAnimal<?> anotherAnimal) {
+        return this.animal.name == anotherAnimal.animal.name;
     }
 
 }
