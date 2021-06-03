@@ -4,7 +4,7 @@ import Animals.Animal;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Comparable<Animal> {
     private int maxRunDistance = 200;
     private int maxSwimDistance = 0;
 
@@ -28,4 +28,14 @@ public class Cat extends Animal {
         }
 
     }
+
+    public int getMaxRunDistance() {
+        return maxRunDistance;
+    }
+
+    @Override
+    public int compareTo(Animal o) {
+        System.out.println(o.name +" - "+ o.getMaxRunDistance());
+        return this.maxRunDistance - o.getMaxRunDistance();
+    };
 }

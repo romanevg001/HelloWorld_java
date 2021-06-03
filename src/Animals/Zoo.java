@@ -19,6 +19,8 @@ public class Zoo<T> {
         Cat[] cats = (Cat[]) this.generateAnimals(catsName, AnimalType.Cat);
         Dog[] dogs = (Dog[]) this.generateAnimals(dogsName, AnimalType.Dog);
 
+        System.out.println("compareTo: " + dogs[0].getMaxRunDistance());
+        System.out.println("compareTo: " + cats[0].compareTo(dogs[0]));
 
         for (int i = 0; i < cats.length; i++) {
             System.out.println("-------------------" + AnimalType.Cat +"------------------");

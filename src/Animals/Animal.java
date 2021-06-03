@@ -1,9 +1,7 @@
 package Animals;
 
-public abstract class Animal {
+public abstract class Animal implements IAnimal  {
     String name;
-
-
 
     void run(int distance, int maxRunDistance) {
         if (distance <= maxRunDistance) {
@@ -20,4 +18,10 @@ public abstract class Animal {
             System.out.println(this.name +" не проплыл "+ distance + " м ");
         }
     }
+
+
+
+
+
+
 }
