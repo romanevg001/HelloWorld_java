@@ -2,13 +2,31 @@ package Animals;
 
 import Animals.AnimalType;
 
+import java.util.Arrays;
+import java.util.*;
+
 public class Zoo<T> {
 
     public Zoo() {
 
 
-        String [] catsName = {"Барсик","Уксус","Сода"};
-        String [] dogsName = {"Майло","Иван","Мухтар"};
+        String [] catsName = {"Барсик","Барсик","Уксус","Сода","Барсик"};
+        String [] dogsName = {"Майло","Иван","Бобик","Мухтар","Шарик"};
+
+        List<String> catsNameList = new ArrayList<>(Arrays.asList(catsName));
+        List<String> dogsNameList = new LinkedList<>(Arrays.asList(dogsName));
+        
+        catsNameList.contains("Уксус");
+
+        while(catsNameList.remove("Барсик"));
+        //System.out.println(catsNameList.remove("Барсик1"));
+//        catsNameList.sort((a,b)->{
+//            return a.indexOf("с") - b.indexOf("с");
+//        });
+        dogsNameList.remove("Мухтар");
+        Collections.sort(dogsNameList);
+        System.out.println(catsNameList);
+        System.out.println(dogsNameList);
 
         CreateAnimal<Cat> cat = new CreateAnimal<>(new Cat("Соня"));
         CreateAnimal<Dog> dog = new CreateAnimal<>(new Dog("Соня"));
