@@ -1,2 +1,5 @@
-package Family;public class Pet {
+package Family;
+
+public abstract class Pet implements IMember {
+
 }

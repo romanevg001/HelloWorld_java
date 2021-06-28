@@ -1,2 +1,6 @@
-package Family;public interface Human {
+package Family;
+
+public interface IHuman extends IMember {
+
+    public void call(IMember member);
 }

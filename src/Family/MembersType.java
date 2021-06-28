@@ -1,2 +1,6 @@
-package Family;public enum MembersType {
+package Family;
+
+public enum MembersType {
+    Mother,
+    Cat
 }

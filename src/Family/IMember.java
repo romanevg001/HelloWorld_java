@@ -1,6 +1,6 @@
 package Family;
 
-public interface IPet {
+public interface IMember {
     String name = "";
 
     public void response();
