@@ -2,5 +2,6 @@ package Family;
 
 public enum MembersType {
     Mother,
-    Cat
+    Cat,
+    Father
 }

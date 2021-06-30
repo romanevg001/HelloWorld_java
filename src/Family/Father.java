@@ -1,10 +1,8 @@
 package Family;
 
-import java.util.*;
-
-public class Mother extends Member {
-    MembersType type = MembersType.Mother;
-    public Mother(String name) {
+public class Father extends Member {
+    MembersType type = MembersType.Father;
+    public Father(String name) {
         super(name);
     }
 
@@ -15,4 +13,5 @@ public class Mother extends Member {
     public void response(Member member) {
 
     }
+
 }

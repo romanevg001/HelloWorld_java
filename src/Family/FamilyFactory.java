@@ -4,14 +4,20 @@ import java.util.Map;
 
 public class FamilyFactory {
     public static void run () {
-        Family ivanovs = new Family<>("Ивановы");
+        Family ivanovs = new Family("Ивановы");
         Mother iMother = new Mother("Виолетта");
-        ivanovs.addMember(MembersType.Mother, iMother);
+        Father iFather = new Father("Милтон");
+        ivanovs.addMember(iMother);
+        ivanovs.addMember(iFather);
 
         Cat iCat = new Cat("Борис");
         iCat.addResponsibleMember(iMother);
-        ivanovs.addMember(MembersType.Cat, iCat);
+        ivanovs.addMember(iCat);
 
-        IMember ivanovsMember1 = ivanovs.getMember(MembersType.Mother);
+        Member ivanovsMother = ivanovs.getMember(MembersType.Mother);
+        Member ivanovsCat = ivanovs.getMember(MembersType.Cat);
+        Member ivanovsFather = ivanovs.getMember(MembersType.Father);
+        ivanovsMother.call(ivanovsCat);
+        ivanovsFather.call(ivanovsCat);
     }
 }
