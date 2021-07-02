@@ -2,11 +2,11 @@ package Family;
 
 import java.util.*;
 
-public class Cat extends Member  {
+public class Dog extends Member  {
     private List<Member> responsibleMembers = new ArrayList<>();
 
-    public Cat(String name) {
-        super(name, MembersType.Cat);
+    public Dog(String name) {
+        super(name, MembersType.Dog);
     }
 
     void call(Member member) {
@@ -19,7 +19,7 @@ public class Cat extends Member  {
 
     void response(Member member) {
         if (responsibleMembers.contains(member)) {
-            System.out.println("Mew");
+            System.out.println("Gav");
         }
     }
 }

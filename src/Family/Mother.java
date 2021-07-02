@@ -1,18 +1,17 @@
 package Family;
 
-import java.util.*;
-
 public class Mother extends Member {
-    MembersType type = MembersType.Mother;
     public Mother(String name) {
-        super(name);
+        super(name, MembersType.Mother);
+        System.out.println("Mother type: " + this.type);
+
     }
 
-    public void call(Member member) {
+    void call(Member member) {
         member.response(this);
     }
 
-    public void response(Member member) {
+    void response(Member member) {
 
     }
 }

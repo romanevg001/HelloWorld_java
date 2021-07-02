@@ -1,18 +1,16 @@
 package Family;
 
-import java.util.*;
 
-public abstract class Member<T> {
+public abstract class Member {
     String name;
     MembersType type;
-    private List<T> canCallList =  new ArrayList<T>();
 
-
-    public Member(String name) {
+    public Member(String name, MembersType type) {
         this.name = name;
+        this.type = type;
     }
 
-    public abstract void call(Member member);
+     abstract void call(Member member);
 
-    public abstract void response(Member member);
+     abstract void response(Member member);
 }

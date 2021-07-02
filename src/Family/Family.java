@@ -11,11 +11,16 @@ public class Family {
     }
 
     void addMember(Member member) {
+        System.out.println(member.type);
         members.put(member.type, member);
     }
 
     Member getMember(MembersType type) {
         return members.get(type);
+    }
+
+    Collection<Member> getMembers() {
+        return members.values();
     }
 
 }

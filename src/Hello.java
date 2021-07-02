@@ -1,5 +1,6 @@
 
 import Animals.Zoo;
+import Family.FamilyFactory;
 import Fruits.Market;
 
 public class Hello {
@@ -7,6 +8,7 @@ public class Hello {
         Zoo zoo1 = new Zoo<String>();
 
         Market.run();
+        FamilyFactory.run();
         // write your code here
     }
 }
