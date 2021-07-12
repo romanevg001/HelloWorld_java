@@ -5,7 +5,7 @@ public class TestTreads {
 
     public static void main(String[] args) {
 
-        TestTreads t = new TestTreads();
+/*         TestTreads t = new TestTreads();
 
        Thread t1 = new Thread(() -> t.method1("t1 join"));
        t1.start();
@@ -26,6 +26,10 @@ public class TestTreads {
        new Thread(() -> t.method2()).start();
        new Thread(() -> methodStatic("methodStatic")).start();
        new Thread(() -> TestTreads.methodStatic("methodStatic2")).start();
+
+
+ */
+       Threadtest2.run();
     }
     
     public synchronized void method1(String message) {
