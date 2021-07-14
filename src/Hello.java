@@ -1,5 +1,6 @@
 
 import Animals.Zoo;
+import Duck.DuckRunner;
 import Family.FamilyFactory;
 import Fruits.Market;
 
@@ -9,6 +10,7 @@ public class Hello {
 
         Market.run();
         FamilyFactory.run();
+        DuckRunner.run();
         // write your code here
     }
 }
