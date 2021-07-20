@@ -1,8 +1,7 @@
 package Duck;
 
 public class Fly implements IFly {
-    @Override
     public void fly() {
-        System.out.println("Fly");
+        System.out.println("I am Flying");
     }
 }

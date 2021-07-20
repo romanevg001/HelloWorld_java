@@ -1,8 +1,12 @@
 package Duck;
 
 public abstract class Duck {
-    private IFly flying;
-    private IQauck quacking;
+    IFly flying;
+    IQauck quacking;
+
+    public Duck(){
+        
+    }
 
     public void performFly() {
         flying.fly();

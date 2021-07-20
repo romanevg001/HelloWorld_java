@@ -3,7 +3,7 @@ package Treads;
 public class TestTreads {
     Object monitor = new Object();
 
-    public static void main(String[] args) {
+    public static void run(String[] args) {
 
 /*         TestTreads t = new TestTreads();
 

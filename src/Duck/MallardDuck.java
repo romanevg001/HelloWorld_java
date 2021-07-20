@@ -1,11 +1,10 @@
 package Duck;
 
 public class MallardDuck extends Duck {
-    private IFly flying;
-    private IQauck quacking;
 
-    MallardDuck() {
+    public MallardDuck() {
         flying = new Fly();
         quacking = new Qauck();
+
     }
 }

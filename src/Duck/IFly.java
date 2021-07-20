@@ -1,5 +1,5 @@
 package Duck;
 
 public interface IFly {
-    void fly();
+    public void fly();
 }
