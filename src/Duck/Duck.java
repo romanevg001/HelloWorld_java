@@ -15,4 +15,13 @@ public abstract class Duck {
     public void performQuack() {
         quacking.quack();
     }
+
+
+    public void setFlyBehavoir(IFly flyType) {
+        flying = flyType;
+    }
+
+    public void setQauckBehavoir(IQauck qauckType) {
+        quacking = qauckType;
+    }
 }

@@ -7,6 +7,9 @@ public class DuckRunner {
         System.out.println("mallard: ");
         mallard.performFly();
         mallard.performQuack();
+        mallard.setFlyBehavoir(new FlyNo());
+        mallard.performFly();
+
 
         Duck rubber = new RubberDuck();
         System.out.println("rubber: ");
