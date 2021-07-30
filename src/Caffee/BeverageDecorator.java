@@ -1,13 +1,16 @@
 package Caffee;
 
 public abstract class BeverageDecorator extends Beverage {
+    Beverage beverage;
 
-    public String getDescription(Beverage beverage) {
-        return beverage.getDescription() + ',' + getDescription();
+    @Override
+    public String getDescription() {
+        return beverage.getDescription() + ',' + super.getDescription();
     }
 
-    public double price(Beverage beverage) {
-        return beverage.price() + price();
+    @Override
+    public double price() {
+        return beverage.price() + super.price();
     }
     
 }

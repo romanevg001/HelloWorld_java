@@ -24,7 +24,7 @@ public abstract class Beverage implements IBeverage {
 
     @Override
     public double price() {
-        return getSize() * dollarsFor100ml;
+        return getSize() / ml * dollarsFor100ml;
     }
 
     public String getDescription(){
