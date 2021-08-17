@@ -16,6 +16,7 @@ public abstract class BeverageDecorator extends Beverage {
     }
 
     private double countSize() {
+        System.out.println("beverage.getSize(): " + beverage.getDescription() + " - "+ beverage.getSize());
         return Math.round(beverage.getSize() * percentMLOfBeverage) / oneDrink;
     }
 
