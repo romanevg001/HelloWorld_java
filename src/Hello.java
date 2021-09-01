@@ -1,10 +1,12 @@
 
 //import Animals.Zoo;
-import Pizza.PizzaRunner;;
+//import Pizza.PizzaRunner;
+import Remote.RemoteLoader;
 
 public class Hello {
     public static void main(String[] args) {
-        PizzaRunner.run();
+        RemoteLoader.run();
+      //  PizzaRunner.run();
        /*  Zoo zoo1 = new Zoo<String>();
 
         Market.run();
