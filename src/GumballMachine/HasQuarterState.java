@@ -1,6 +1,7 @@
 package GumballMachine;
 
-public class HasQuarterState implements State { GumballMachine gumballMachine;
+public class HasQuarterState implements State { 
+    GumballMachine gumballMachine;
     
     public HasQuarterState(GumballMachine gumballMachine) { 
         this.gumballMachine = gumballMachine;

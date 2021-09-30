@@ -45,6 +45,10 @@ public class GumballMachine {
         }
     }
 
+    public int getCount() {
+        return 0;
+    }
+
 
 
     public State getNoQuarterState() {
