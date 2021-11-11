@@ -20,11 +20,12 @@ public class Threadtest2 {
         
         arr1 = calc(arr1);
         
-        System.out.println(System.currentTimeMillis() - a);
+        System.out.println("method1: " + (System.currentTimeMillis() - a));
     }
 
     public void method2() {
         float[] arr2 = new float[size];
+        float[] arRes = new float[size];
         float[] a1 = new float[half];
         float[] a2 = new float[half];
 
@@ -34,14 +35,22 @@ public class Threadtest2 {
         System.arraycopy(arr2, 0, a1, 0, half);
         System.arraycopy(arr2, half, a2, 0, half);
 
-        Thread t1 = new Thread(() -> calc(a1));
-        t1.start();
-        t1.
-        calc(a2);
 
-        System.out.println(System.currentTimeMillis() - b);
+        Thread t1 = new Thread(() -> { 
+            System.arraycopy(calc(a1), 0, arRes, definedIndex(arRes), half);
+        });
+        Thread t2 = new Thread(() -> { 
+            System.arraycopy(calc(a2), 0, arRes, definedIndex(arRes), half);
+        });
+        t1.start();
+        t2.start();
+  
+        System.out.println("method2: " + (System.currentTimeMillis() - b));
     }
 
+    private int definedIndex(float[] arRes) {
+        return arRes[0] > 0 ? half : 0;
+    }
 
     private float[] calc(float[] arr) {
         for(int i = 0; i < arr.length; i++) {

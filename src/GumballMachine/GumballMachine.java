@@ -14,11 +14,7 @@ public class GumballMachine {
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         this.count = numberGumballs; 
-        if (numberGumballs > 0) {
-            state = noQuarterState; 
-        } else {
-            state = soldOutState;
-        } 
+        setInitState();
     }
 
     public void insertQuarter() { 
@@ -34,34 +30,48 @@ public class GumballMachine {
         state.dispense();
     }
 
+    private void setInitState() {
+        if (count > 0) {
+            state = noQuarterState; 
+        } else {
+            state = soldOutState;
+        } 
+    }
+
+    void refill(int count) {
+        this.count += count;
+        System.out.println("The gumball machine was just refilled; it's new count is: " + this.count);
+        state.refill();
+    }
+
     void setState(State state) { 
         this.state = state;
     }
 
     void releaseBall() {
         System.out.println("A gumball comes rolling out the slot...");
-        if (count != 0) {
-            count = count — 1; 
+        if (count > 0) {
+            count -= 1; 
         }
     }
 
     public int getCount() {
-        return 0;
+        return count;
     }
 
 
 
     public State getNoQuarterState() {
-        return this.state;
+        return noQuarterState;
     }
     public State getSoldState() {
-        return this.state;
+        return soldState;
     }
     public State getHasQuarterState() {
-        return this.state;
+        return hasQuarterState;
     }
     public State getSoldOutState() {
-        return this.state;
+        return soldOutState;
     }
     
     

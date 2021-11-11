@@ -1,11 +1,12 @@
 
 //import Animals.Zoo;
 //import Pizza.PizzaRunner;
-import Remote.RemoteLoader;
+//import Remote.RemoteLoader;
+import Treads.TestTreads;
 
 public class Hello {
     public static void main(String[] args) {
-        RemoteLoader.run();
+      //  RemoteLoader.run();
       //  PizzaRunner.run();
        /*  Zoo zoo1 = new Zoo<String>();
 
@@ -13,6 +14,6 @@ public class Hello {
         FamilyFactory.run(); */
         //DuckRunner.run();
        // Caffee.run();
-        // write your code here
+       TestTreads.run();
     }
 }
