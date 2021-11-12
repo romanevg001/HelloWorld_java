@@ -1,5 +1,5 @@
 package Treads;
-
+import java.util.*;
 public class TestTreads {
     Object monitor = new Object();
 
@@ -29,7 +29,37 @@ public class TestTreads {
 
 
  */
-       Threadtest2.run();
+     //  Threadtest2.run();
+     
+       
+        long counter = Math.round(Math.random()*100);
+        float[] arr1 = new float[Threadtest2.size];
+
+        System.out.println("counte Threads >> " + counter);
+
+        while(counter > 0) {
+            System.out.println("counter >> " + counter);
+
+            new Thread(() -> {
+                System.out.println("Thread START >>> " + Counter.getCount());
+                
+                Threadtest2.calc(arr1);
+                try {
+                    long sleepTime = Math.round(Math.random()*100);
+                    System.out.println(" Thread # >> " + Counter.getCount() + " sleepTime: "+ sleepTime);
+
+                    Thread.sleep(sleepTime);
+                    Counter.addCount();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread END >>> " + Counter.getCount());
+
+            }).start();
+
+            --counter;
+        }
+
     }
     
     public synchronized void method1(String message) {
