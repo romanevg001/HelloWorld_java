@@ -3,7 +3,7 @@ package Treads;
 import java.util.*;
 
 public class Threadtest2 {
-    static final int size = 10000000;
+    static final int size = 10_000_000;
     static final int half = size / 2;
     
     public static void run() {
