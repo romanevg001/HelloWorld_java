@@ -6,6 +6,11 @@ import Treads.TestTreads;
 
 public class Hello {
     public static void main(String[] args) {
+
+      byte b = 50;
+      b = (byte) (b * 2);
+
+
       //  RemoteLoader.run();
       //  PizzaRunner.run();
        /*  Zoo zoo1 = new Zoo<String>();
@@ -15,5 +20,6 @@ public class Hello {
         //DuckRunner.run();
        // Caffee.run();
        TestTreads.run();
+       
     }
 }

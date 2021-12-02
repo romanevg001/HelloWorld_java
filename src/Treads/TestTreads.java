@@ -5,6 +5,23 @@ public class TestTreads {
 
     public static void run() {
 
+
+       // new PoolTreads();
+       new PoolTreadsSubscribe();
+      /*   Thread trunnable  = new Thread(new Trunnable());
+        Thread tinherite = new Tinherite();
+
+        trunnable.start();
+        trunnable.setPriority(9);
+
+        tinherite.start();
+        try {
+            trunnable.join();
+            tinherite.join();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+ */
 /*         TestTreads t = new TestTreads();
 
        Thread t1 = new Thread(() -> t.method1("t1 join"));
@@ -31,7 +48,11 @@ public class TestTreads {
  */
      //  Threadtest2.run();
      
-       
+      
+    }
+
+    private void counter() {
+ 
         long counter = Math.round(Math.random()*100);
         float[] arr1 = new float[Threadtest2.size];
 
