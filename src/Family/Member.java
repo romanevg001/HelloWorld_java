@@ -1,6 +1,6 @@
 package Family;
 
-
+// 
 public abstract class Member {
     String name;
     MembersType type;

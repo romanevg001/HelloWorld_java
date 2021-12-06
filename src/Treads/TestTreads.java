@@ -1,13 +1,16 @@
 package Treads;
-import java.util.*;
+//import java.util.*;
 public class TestTreads {
     Object monitor = new Object();
 
-    public static void run() {
+    public static void run()  {
 
 
        // new PoolTreads();
-       new PoolTreadsSubscribe();
+     //  new PoolTreadsSubscribe();
+      // new PoolTreadsFactory();
+      // new TreadsLock();
+      new TreadReadWriteLock();
       /*   Thread trunnable  = new Thread(new Trunnable());
         Thread tinherite = new Tinherite();
 
