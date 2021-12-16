@@ -4,13 +4,12 @@ public class TestTreads {
     Object monitor = new Object();
 
     public static void run()  {
-
-
+  
        // new PoolTreads();
      //  new PoolTreadsSubscribe();
       // new PoolTreadsFactory();
       // new TreadsLock();
-      new TreadReadWriteLock();
+     // new TreadReadWriteLock();
       /*   Thread trunnable  = new Thread(new Trunnable());
         Thread tinherite = new Tinherite();
 
