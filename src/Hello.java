@@ -2,7 +2,8 @@
 //import Animals.Zoo;
 //import Pizza.PizzaRunner;
 //import Remote.RemoteLoader;
-import Treads.TestTreads;
+//import Treads.TestTreads;
+import Enum.AppleRunner;
 
 public class Hello {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class Hello {
         FamilyFactory.run(); */
         //DuckRunner.run();
        // Caffee.run();
-       TestTreads.run();
-       
+      // TestTreads.run();
+      AppleRunner.run();
     }
 }
