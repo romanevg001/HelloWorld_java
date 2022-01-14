@@ -10,6 +10,10 @@ public class Hello {
 
       byte b = 50;
       b = (byte) (b * 2);
+      boolean bf = false;
+      Boolean.valueOf(bf);
+      Byte.valueOf(b);
+      System.out.println(Boolean.valueOf(bf).booleanValue()+" - "+ Byte.valueOf(b).byteValue() );
 
 
       //  RemoteLoader.run();

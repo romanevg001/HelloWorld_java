@@ -5,6 +5,7 @@ public enum Family {
     Wife("I'm coming, my darling!"),
     Dog("woof-woof!"),
     Cat("meow-meow!"),
+    Snake("shh-hshhh!"),
     Parrot;
 
     private String responsePhrase;
