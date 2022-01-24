@@ -1,0 +1,5 @@
+Wife,true,Husband
+Dog,true,Husband
+Cat,true,Wife
+Parrot,true,Dog
+Dog,true,Parrot
