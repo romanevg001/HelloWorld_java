@@ -11,11 +11,13 @@ public class Member implements FamilyMember, Caller, Callable {
     @Override
     public int hashCode() {
         String[] tm = typeMember.toString().toUpperCase().split("");
-        ArrayList<Integer> hcArr = new ArrayList<Integer>();
+        ArrayList<String> hcArr = new ArrayList<String>();
         for (String m : tm) {
-            hcArr.add(new String(alfabet).indexOf(m));
+            hcArr.add(Integer.toString( new String(alfabet).indexOf(m) ));
         }
-        return Integer.valueOf( Arrays.toString(hcArr.toArray()) );
+        System.out.println("hashCode => " + Integer.parseInt( String.join("",hcArr) ));
+        
+        return Integer.parseInt( String.join("",hcArr) );
     }
 
     @Override
@@ -26,7 +28,7 @@ public class Member implements FamilyMember, Caller, Callable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-   
-        return true;
+        Member other = (Member) obj;
+        return this.hashCode() == other.hashCode();
     }
 }
