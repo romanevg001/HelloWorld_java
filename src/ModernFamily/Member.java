@@ -1,8 +1,7 @@
 package ModernFamily;
 import java.util.*;
-import java.lang.*;
 
-public class Member implements FamilyMember, Caller, Callable {
+public class Member implements Caller, Callable {
     private char[] alfabet = {'A','B','C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     Family typeMember;
     public Member(Family typeMember) {
@@ -15,8 +14,6 @@ public class Member implements FamilyMember, Caller, Callable {
         for (String m : tm) {
             hcArr.add(Integer.toString( new String(alfabet).indexOf(m) ));
         }
-        System.out.println("hashCode => " + Integer.parseInt( String.join("",hcArr) ));
-        
         return Integer.parseInt( String.join("",hcArr) );
     }
 
@@ -29,6 +26,6 @@ public class Member implements FamilyMember, Caller, Callable {
         if (getClass() != obj.getClass())
             return false;
         Member other = (Member) obj;
-        return this.hashCode() == other.hashCode();
+        return hashCode() == other.hashCode();
     }
 }

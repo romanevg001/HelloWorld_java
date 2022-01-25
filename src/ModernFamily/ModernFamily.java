@@ -23,7 +23,7 @@ public class ModernFamily {
         for (String[] line : val) {
             Member who = new Member(Family.valueOf(line[0]));
             Member whom = new Member(Family.valueOf(line[2]));
-           
+           System.out.println(" => " + line[0] + " = " + line[2]);
             members.add(who);
             members.add(whom);
         
