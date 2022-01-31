@@ -23,22 +23,20 @@ public class ModernFamily {
         for (String[] line : val) {
             Member who = new Member(Family.valueOf(line[0]));
             Member whom = new Member(Family.valueOf(line[2]));
-           System.out.println(" => " + line[0] + " = " + line[2]);
+
             members.add(who);
             members.add(whom);
         
         
         }
-        System.out.println("val: "+val.length);
+ //        System.out.println("val: "+val.length);
 
         System.out.println("members.size:  "+members.size());
-
+ 
 
         for (Member member : members) {
-            System.out.println(member.typeMember);
-             Member whom1 = getArbitraryMember(member);
-           
-           // System.out.println(member.typeMember + " call " + whom1.typeMember + ", the response is: "+  member.calls(whom1)); 
+            Member whom1 = getArbitraryMember(member);
+            System.out.println(member.typeMember + " call " + whom1.typeMember + ", the response is: "+  member.calls(whom1)); 
         }
 
     }

@@ -3,14 +3,14 @@ package ModernFamily;
 public interface Callable extends FamilyMember {
 
     public default String response(Caller caller){
-        return this.likes(caller)? Family.valueOf(whoAmI()).getResponsePhrase() :"";
+        return this.likes(caller)? whoAmI().getResponsePhrase() :"";
     };
 
     public default boolean likes (Caller caller) {
         //searching the config
         for (Relation relation : Config.relationship) {
             // if I like caller
-            if (relation.who.toString().equals(whoAmI()) && relation.likes && relation.whom.toString().equals(caller.whoAmI())) {
+            if (relation.who.equals(whoAmI()) && relation.likes && relation.whom.equals(caller.whoAmI())) {
                 return true;
             }
         }
