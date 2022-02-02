@@ -3,6 +3,7 @@ package ModernFamily;
 public interface Callable extends FamilyMember {
 
     public default String response(Caller caller){
+    //    System.out.println(this.whoAmI() +" - "+ caller.whoAmI()+"   -   "+ this.likes(caller)+" = "+ whoAmI().getResponsePhrase());
         return this.likes(caller)? whoAmI().getResponsePhrase() :"";
     };
 

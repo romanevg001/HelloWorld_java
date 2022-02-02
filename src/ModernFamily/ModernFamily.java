@@ -36,28 +36,22 @@ public class ModernFamily {
 
         for (Member member : members) {
             Member whom1 = getArbitraryMember(member);
-            System.out.println(member.typeMember + " call " + whom1.typeMember + ", the response is: "+  member.calls(whom1)); 
+            System.out.println(member.typeMember + " call " + whom1.typeMember + ", the response is: " + member.calls(whom1));
         }
 
     }
 
     Member getArbitraryMember(Member member) {
-      /*   Iterator<Member> i = members.iterator();  
-        if(i.hasNext()) {  
-            return i.next();  
-        }  else { */
-            Member arr[] = new Member[members.size()];
-            Member[] arrMembers = members.toArray(arr);
-            Member arMember =  arrMembers[(int) Math.round(Math.random() * members.size()) ];
-            if (member != arMember) {
-                return arMember;
-            } else {
-                return getArbitraryMember(member);
-            }
 
-      //  }
-       /*  Member arMember = members.get( (int) Math.round(Math.random() * members.size()) );
-         */
+        Member arr[] = new Member[members.size()];
+        Member[] arrMembers = members.toArray(arr);
+        Member arMember =  arrMembers[(int) Math.round(Math.random() * (members.size()-1)) ];
+        if (member != arMember) {
+            return arMember;
+        } else {
+            return getArbitraryMember(member);
+        }
+
     }
 
     static String [][] getResource(String src) {
@@ -65,8 +59,8 @@ public class ModernFamily {
             {"Wife","true","Husband"},
             {"Dog","true","Wife"},
             {"Cat","true","Wife"},
-            {"Parrot","true","Dog"},
             {"Dog","true","Parrot"},
+            {"Dog","true","Cat"}
         };
 /* 
         try {
